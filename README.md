@@ -1,1 +1,3 @@
-# Bulb--Illuminator
+# Bulb--Iluminator
+
+Simple JS project
