@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb Design</title>
+    <style>
+        /* Styling the bulb container */
+        #bulb {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: white;
+            margin: 50px auto;
+            transition: background-color 0.3s ease-in-out;
+            border: 5px solid #ccc;
+        }
+
+        /* Styling the buttons container */
+        .button-container {
+            display: flex;
+            flex-direction: column; /* Align buttons vertically */
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            width: 200px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #dcdcdc;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- The Bulb -->
+    <div id="bulb"></div>
+
+    <!-- Buttons for controlling the bulb -->
+    <div class="button-container">
+        <button onclick="turnOn()">Turn On</button>
+        <button onclick="turnOff()">Turn Off</button>
+    </div>
+
+    <script>
+        // Function to turn the bulb on and change its color
+        function turnOn() {
+            // Ask for the color input
+            let color = prompt("Enter the color for the bulb (e.g., red, blue, yellow):");
+            
+            // Validate the input and set the color
+            if (color) {
+                document.getElementById("bulb").style.backgroundColor = color;
+            } else {
+                alert("Invalid color! The bulb remains white.");
+                document.getElementById("bulb").style.backgroundColor = "white";
+            }
+        }
+
+        // Function to turn the bulb off and reset the color to white
+        function turnOff() {
+            document.getElementById("bulb").style.backgroundColor = "white";
+        }
+    </script>
+
+</body>
+</html>
